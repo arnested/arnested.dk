@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/arnested
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://arnested.dk
+  * I am arnested (https://keybase.io/arnested) on keybase.
+  * I have a public key with fingerprint D8A1 3FA5 BAE3 E168 5C12  A72D 1397 DB79 20AB 13A8
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.4.18"
+        },
+        "key": {
+            "fingerprint": "d8a13fa5bae3e1685c12a72d1397db7920ab13a8",
+            "host": "keybase.io",
+            "key_id": "1397DB7920AB13A8",
+            "uid": "43f755f80cce87629350382f511a9c00",
+            "username": "arnested"
+        },
+        "merkle_root": {
+            "ctime": 1408526097,
+            "hash": "b9f01e91285fdfcda64694ec407b0dfb62c9f884f2d41ccc2b157e35a3692cf367ea19dd45716dad55b8ac39431bcae8f59fb5bbb9d83a20e7ea647835264e95",
+            "seqno": 41835
+        },
+        "service": {
+            "hostname": "arnested.dk",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1408526367,
+    "expire_in": 157680000,
+    "prev": "6b87fe5bce5ee4d7208593da147f5a3dd70bdc84ee673a89a130be219ee71c66",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFdkl1oHFUUx3fXNhppNKULPkR0GYhETda5M3Pn3lmrJqVGQasFC1Va3d6PM7uT
+TWfWmUmaZQ1KbCUlCloVHwKFUlqb1g8i9aMl6JMgNJWERiyUYrCEUpUo0Zc+6b0h
+Yut9uh+/87/nf855u+2WTC676YNLjcKpTSey567xzHN/Ve9tGjySDaPUNMRgAGGq
+dyHbC0bJqEGDswSKQVQIIwnFgaSwxnQbwxAnQRQqyiw6RUSN0W7N62g/CCsQ1+NA
+ixmSMmT7DHMGNiCXYoEsRiyJbI9ITjzLZBzZjCrNapSkN31rrGqWA6luNb91i+b7
+tiC7T/NDqw+O7ROMfWoKAZS4lmdj06aWjxFinjBNDSYQr3licQhJClLnuxfi2iCU
+4yhadS3SQCPIMSm2XNMjKiOWVFUQ93wTgYcsin3pC8lcx/UcEI5JuCl97lrC8yl1
+fEs6SAhhcYQJ2JjZrmcJ33YJMORJ6WCCXMkkxpwyYXuOjbhgQH3s+Rxzzj1JbWaZ
+oHjXIdRWeTjgYWUhgZfDyCg5SF2O6mM8HAjQaeuq/c9cUdZUSD2O0khEg+qhmqb1
+pKQ9p426JvcBL3+8JlLmQShVz27sKlLozfVQJroNGKkHMZQDTWDiUlMt/REMK02X
+U+ID5gIwgCOJpeI8WzLkEF+VQkpicimoA+AS1XBPzYXJwUIeAEHCdf9zSVWerKIk
+k6ASsnQoBmP0YPaJdZlsLoPW5/TYPpB/LaPWxkx7vcZ6mJQxJElvJRyqV3QVem8o
+Reb21vZ/x/70q7f+ve3SD+MfXW7QDwe6Lu48s2syv+Cetvu/GF54pNbo7Oh5Nrzn
+vt8vTJ66Unv8wvIdSef8yIGrr5+dOrTQtWPD3YVfmiMDMzuPHO7s71t/5oU3p580
+Tywe2XG8u/junwe3j7UUO84vLj10dWXim8GJ5s+/fnZ97r09y7ft+vZ4yZ/df/9M
+274pq/VoWl/Jz1fD/IsrHRu/f+VoYWb6rtn9m5s/Xv50rH+7/4e1e7LrE3jjWM+5
+Pb0k13Fy3dPFs2Ofnx9tvz7RD/lr77ScHIHftiZftn21dGBq/LvDjz063mI58+Jr
+3PvUM5Cbbd0996D31kA6vfx+7c65xewSP/TS8z3bNuQuXnl4809R9R8=
+=9CCU
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/arnested
+
+==================================================================
