@@ -7,12 +7,23 @@ import (
 	"net"
 	"net/http"
 	"os"
+	"strings"
+	"time"
 )
+
+var buildTime string
 
 //go:embed static/*
 var staticFiles embed.FS
 
 func main() {
+	// If no buildTime was set during compilation we use the
+	// current time at startup.
+	if buildTime == "" {
+		buildTime = time.Now().UTC().Format(time.RFC1123Z)
+	}
+
+	log.Printf("Build time: %s", buildTime)
 	staticFS, err := fs.Sub(staticFiles, "static")
 	if err != nil {
 		log.Fatal(err)
@@ -28,6 +39,14 @@ func main() {
 		w.Header().Set("X-Content-Type-Options", "nosniff")
 		w.Header().Set("Content-Security-Policy", "default-src 'self'; style-src 'unsafe-inline'")
 		w.Header().Set("Referrer-Policy", "no-referrer")
+		w.Header().Set("Date", buildTime)
+
+		// Don't list directories.
+		if r.URL.Path != "/" && strings.HasSuffix(r.URL.Path, "/") {
+			http.NotFound(w, r)
+			return
+		}
+
 		fs.ServeHTTP(w, r)
 	})
 
