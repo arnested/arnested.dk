@@ -10,7 +10,7 @@ COPY *.go go.mod /build/
 COPY static/ /build/static/
 
 RUN go version
-RUN go build
+RUN go build -ldflags="-X 'main.buildTime=$(date -R -u)'"
 
 FROM scratch
 
