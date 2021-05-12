@@ -7,6 +7,7 @@ import (
 	"net"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -39,6 +40,12 @@ func main() {
 		w.Header().Set("Content-Security-Policy", "default-src 'self'; style-src 'unsafe-inline'")
 		w.Header().Set("Referrer-Policy", "no-referrer")
 		w.Header().Set("Date", buildTime)
+
+		// Don't list directories.
+		if r.URL.Path != "/" && strings.HasSuffix(r.URL.Path, "/") {
+			http.NotFound(w, r)
+			return
+		}
 
 		fs.ServeHTTP(w, r)
 	})
