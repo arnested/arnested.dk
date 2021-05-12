@@ -23,9 +23,9 @@ func main() {
 
 	// Serve static files
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Header().Set("Strict-Transport-Security", "max-age: 10886400; includeSubdomains; preload")
+		w.Header().Set("Strict-Transport-Security", "max-age=10886400; includeSubdomains; preload")
 		w.Header().Set("X-Frame-Options", "DENY")
-		w.Header().Set("X-Content-Type", "nosniff")
+		w.Header().Set("X-Content-Type-Options", "nosniff")
 		w.Header().Set("Content-Security-Policy", "default-src 'self'; style-src 'unsafe-inline'")
 		w.Header().Set("Referrer-Policy", "no-referrer")
 		fs.ServeHTTP(w, r)
