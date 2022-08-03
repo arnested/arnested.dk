@@ -2,8 +2,8 @@ on: push
 name: Docker build and push
 
 permissions:
-  contents: read
   actions: read
+  contents: write
   pull-requests: read
   security-events: write
 
