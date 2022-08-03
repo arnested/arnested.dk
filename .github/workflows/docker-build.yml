@@ -1,9 +1,15 @@
 on: push
 name: Docker build and push
+
+permissions:
+  contents: read
+  actions: read
+  pull-requests: read
+  security-events: write
+
 jobs:
   build:
     name: Docker build and push
-    if: '!github.event.deleted'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -14,7 +20,7 @@ jobs:
       uses: anothrNick/github-tag-action@master
       id: version
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ github.token }}
         WITH_V: true
         DEFAULT_BUMP: patch
     - name: Set up Docker Buildx
@@ -26,7 +32,7 @@ jobs:
       with:
         registry: ghcr.io
         username: ${{ github.repository_owner }}
-        password: ${{ secrets.GHCR_TOKEN }}
+        password: ${{ github.token }}
     - name: Build and push Docker images
       uses: docker/build-push-action@v3
       with:
