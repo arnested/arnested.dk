@@ -9,6 +9,8 @@ import (
 	"os"
 	"strings"
 	"time"
+
+	"github.com/klauspost/compress/gzhttp"
 )
 
 var buildTime string
@@ -30,7 +32,7 @@ func main() {
 	}
 	webrootFS := http.FS(staticFS)
 
-	fs := http.FileServer(webrootFS)
+	fs := gzhttp.GzipHandler(http.FileServer(webrootFS))
 
 	// Serve static files
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
