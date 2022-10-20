@@ -6,7 +6,7 @@ ENV GO111MODULE=on
 ENV CGO_ENABLED=0
 ENV GOOS=linux
 
-COPY *.go go.mod /build/
+COPY *.go go.mod go.sum /build/
 COPY static/ /build/static/
 
 RUN go version
