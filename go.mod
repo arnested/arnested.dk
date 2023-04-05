@@ -2,4 +2,4 @@ module github.com/arnested/arnested.dk
 
 go 1.19
 
-require github.com/klauspost/compress v1.16.3
+require github.com/klauspost/compress v1.16.4
