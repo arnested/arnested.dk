@@ -52,6 +52,8 @@ func main() {
 		fs.ServeHTTP(w, r)
 	})
 
+	http.HandleFunc("/projects/dk-bib", dkBib)
+
 	addr := ":0"
 	if value, ok := os.LookupEnv("ADDR"); ok {
 		addr = value
@@ -68,4 +70,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+}
+
+func dkBib(w http.ResponseWriter, r *http.Request) {
+    http.Redirect(w, r, "https://github.com/arnested/dk-bib", http.StatusMovedPermanently)
 }
