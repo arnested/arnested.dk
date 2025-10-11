@@ -1,3 +1,4 @@
+// Deprecated: no longer in use
 module github.com/arnested/arnested.dk
 
 go 1.23
